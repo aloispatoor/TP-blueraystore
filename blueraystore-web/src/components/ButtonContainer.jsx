@@ -4,7 +4,7 @@ function ButtonContainer(){
 
     return(
         <div className='button-container'>
-            <Button href="" variant="outline-primary">Add a Movie</Button>
+            <Button href="/add" variant="outline-primary">Add a Movie</Button>
         </div>
     )
 }
