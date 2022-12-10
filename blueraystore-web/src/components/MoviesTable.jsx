@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Table from 'react-bootstrap/Table';
 
 function MoviesTable() {
     const [data, setData] = useState(null);
@@ -23,7 +24,22 @@ function MoviesTable() {
     return (
       <div>
         <h2>Here is the list of our movies</h2>
-        {JSON.stringify(data)}
+        <Table striped responsive variant="dark">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Genre</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map(item =>(
+            <tr key={item.id}>
+              <td>{item.title}</td>
+              <td>{item.genre}</td>
+            </tr>
+            ))}
+          </tbody>
+        </Table>
       </div>
     );
   }
