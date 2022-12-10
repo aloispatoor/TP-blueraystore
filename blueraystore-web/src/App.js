@@ -1,11 +1,12 @@
 import './App.css';
+import Header from './components/Header';
 import MoviesTable from './components/MoviesTable';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Title/>
+        <Header/>
         <MoviesTable/>
       </header>
     </div>

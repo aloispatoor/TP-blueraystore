@@ -10,6 +10,7 @@ function MoviesTable() {
         const data = await response.json();
         setData(data);
         setLoading(false);
+        console.log(data);
       }
   
       fetchData();
@@ -21,7 +22,7 @@ function MoviesTable() {
   
     return (
       <div>
-        <h1>Data from the API:</h1>
+        <h2>Here is the list of our movies</h2>
         {JSON.stringify(data)}
       </div>
     );
