@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Api() {
+function MoviesTable() {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
   
@@ -27,4 +27,4 @@ function Api() {
     );
   }
   
-  export default Api;
+  export default MoviesTable;

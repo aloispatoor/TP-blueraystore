@@ -1,36 +1,36 @@
 package com.mycompany.bluraystore.controller;
 
 import com.mycompany.bluraystore.entity.Movie;
-import com.mycompany.bluraystore.service.MovieServiceInterface;
-import org.springframework.stereotype.Controller;
+import com.mycompany.bluraystore.service.MovieService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.Scanner;
-@Controller
+import java.util.List;
+import java.util.Optional;
+
+@RestController
+@RequestMapping("/movie")
 public class MovieController {
-    private MovieServiceInterface service;
+    @Autowired
+    private MovieService service;
 
-    public void addUsingCode(){
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Titre du film : ");
-        String title = scanner.nextLine();
-        System.out.println("Genre du film : ");
-        String genre = scanner.nextLine();
-
-        Movie movie = new Movie();
-        movie.setGenre(genre);
-        movie.setTitle(title);
-
-        service.registerMovie(movie);
-
-        System.out.println("Vous avez enregistré le film " + movie.getTitle() + " de genre " + movie.getGenre());
+    @GetMapping("")
+    public List<Movie> list(){
+        return service.getMovieList();
     }
 
-    public MovieServiceInterface getService() {
-        return service;
+    @PostMapping("/add")
+    public Movie add(@RequestBody Movie movie){
+        return service.registerMovie(movie);
     }
 
-    public void setService(MovieServiceInterface service) {
-        this.service = service;
+    @DeleteMapping("/delete/{id}")
+    public String delete(@PathVariable int id){
+        return service.deleteMovie(id);
+    }
+
+    @GetMapping("/{id}")
+    public Optional<Movie> displayMovie(@PathVariable("id") int id) {
+        return service.getMovieById(id);
     }
 }
