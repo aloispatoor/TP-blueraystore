@@ -1,21 +1,24 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Navbar, Nav, Container, Button, ButtonGroup } from "react-bootstrap";
+import {LinkContainer} from 'react-router-bootstrap';
 
 function Navigation(){
     return(
-        <Navbar bg="dark" variant="dark" expand="lg">
-            <Container fluid>
-                <Nav className="me-auto">
-                    <Link to="/">
-                        <Nav.Link href="/">Home</Nav.Link>
-                    </Link>
-                    <Link to="/add">
-                        <Nav.Link href="/add">Add a movie</Nav.Link>
-                    </Link>
-                </Nav>
-            </Container>
-        </Navbar>
-
+        <>
+            <Navbar bg="dark" variant="dark" expand="xl">
+                <Container>
+                    <Nav>
+                        <ButtonGroup>
+                            <LinkContainer to="/">
+                                <Button className="ml-3">Home</Button>
+                            </LinkContainer>
+                            <LinkContainer to="/add">
+                                <Button className="ml-3">Add a movie</Button>  
+                            </LinkContainer>
+                        </ButtonGroup>
+                    </Nav>
+                </Container>
+            </Navbar>
+        </>
     )
 }
 

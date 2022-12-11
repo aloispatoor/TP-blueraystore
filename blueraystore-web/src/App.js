@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Routes, Route} from "react-router-dom";
+import {Routes, Route, Outlet} from "react-router-dom";
 import Navigation from './components/Navigation';
 import Header from './components/Header';
 import MoviesTable from './components/MoviesTable';
@@ -19,6 +19,7 @@ function App() {
     <Routes>
       <Route path="/add" element={<AddForm />} />
     </Routes> 
+    <Outlet/>
   </div>
   );
 }
