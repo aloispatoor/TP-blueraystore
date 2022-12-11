@@ -17,7 +17,7 @@ function AddForm(props){
       }
 
     return(
-        <Form onSubmit={submit}>
+        <Form onSubmit={submit} className="d-flex">
             <Form.Group className="mb-3" controlId="formBasicText">
                 <Form.Label>Title</Form.Label>
                 <Form.Control type="text" placeholder="Enter title" name="data[title]" value={data.title} 

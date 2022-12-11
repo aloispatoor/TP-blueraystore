@@ -1,17 +1,25 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter as Router, Route} from "react-router-dom";
-import Home from "./page/Home";
+import {Routes, Route} from "react-router-dom";
+import Navigation from './components/Navigation';
+import Header from './components/Header';
+import MoviesTable from './components/MoviesTable';
 import AddForm from './components/AddForm';
 
 function App() {
   return (
-    <Router>
-
-      <Route path="/" index element={<Home />} />
+  <div className="App">
+    <Navigation/>
+    <header className="App-header">
+      <Header/>
+    </header>
+    <section className='App-body'>
+      <MoviesTable/>
+    </section>
+    <Routes>
       <Route path="/add" element={<AddForm />} />
-
-    </Router> 
+    </Routes> 
+  </div>
   );
 }
 

@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1bb324e-c582-4cb4-8f61-e83446bd5008" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/bluraystore/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/bluraystore/controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blueraystore-web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../blueraystore-web/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blueraystore-web/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../blueraystore-web/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blueraystore-web/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../blueraystore-web/src/components/Header.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="f1bb324e-c582-4cb4-8f61-e83446bd5008" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
